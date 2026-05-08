@@ -17,7 +17,18 @@ This analysis aims to:
 - Identify key drivers of employee attrition
 - Understand workforce demographics
 - Provide actionable recommendations to reduce turnover
-- Support strategic HR decision-making
+
+## 📊 Dataset Overview
+
+
+
+ -  Number of rows: 8,194
+           
+ -  Number of columns: 41
+             
+ -  Data Source: DataCamp
+         
+ - Tool :Excdel / Power Query / PowerPivot
 
 
 
@@ -116,13 +127,12 @@ DIVIDE(
 | Inactive Employees | FILTER where Attrition = "Yes" | 237 |
 | Attrition Rate | Inactive ÷ Total | 16.1% |
 
-
 ## 💡 Insights
 
 ### 1️⃣ Early Attrition Is the Biggest Risk
 
 Analysis of attrition by tenure reveals a critical pattern:
-employees are most vulnerable during their **first two years**.
+employees are most vulnerable during their *first two years.*
 
 | Period | Attrition Rate |
 |--------|---------------|
@@ -132,7 +142,7 @@ employees are most vulnerable during their **first two years**.
 | Year 3 | 16.2% 🟡 |
 | Year 4 | 17.4% 🟡 |
 
-> **Key Finding:** 66% of total attrition is concentrated
+> *Key Finding:* 66% of total attrition is concentrated
 > in the first 2 years of employment. This pattern strongly
 > suggests a systemic gap in the onboarding experience
 > and a misalignment between employee expectations
@@ -144,7 +154,7 @@ employees are most vulnerable during their **first two years**.
 
 Attrition is not evenly distributed across job roles.
 The data points to a clear concentration in
-**client-facing and high-pressure positions.**
+*client-facing and high-pressure positions.*
 
 | Job Role | Attrition Rate | Risk Level |
 |----------|---------------|------------|
@@ -155,12 +165,12 @@ The data points to a clear concentration in
 | Software Engineer | 16.0% | 🟢 Acceptable |
 | Manager | 5.4% | 🟢 Healthy |
 
-> **Key Finding:** The two highest attrition roles —
+> *Key Finding:* The two highest attrition roles —
 > Sales Representative and Recruiter — share common
 > characteristics: target-driven environments, high
 > performance pressure, and variable compensation.
 > This is not a people problem, it is a
-> **structural design problem.**
+> *structural design problem.*
 
 ---
 
@@ -168,15 +178,15 @@ The data points to a clear concentration in
 
 When segmenting attrition by travel frequency,
 a clear linear relationship emerges:
-**the more employees travel, the more likely they are to leave.**
+*the more employees travel, the more likely they are to leave.*
 
-| Travel Frequency | Attrition Rate | vs. No Travel |
-|-----------------|---------------|---------------|
-| No Travel | 8.0% | 🟢 Baseline |
-| Some Travel | 15.0% | 🟡 +87% higher |
-| Frequent Traveler | 24.5% | 🔴 +206% higher |
+| Travel Frequency | Attrition Rate |
+|-----------------|---------------|
+| No Travel | 8.0% | |
+| Some Travel | 15.0% | 
+| Frequent Traveler | 24.5% | 
 
-> **Key Finding:** Frequent travelers are **3x more likely**
+> *Key Finding:* Frequent travelers are *3x more likely*
 > to leave compared to non-traveling employees.
 > This indicates that excessive travel is significantly
 > degrading Work-Life Balance and accelerating Burnout —
@@ -184,20 +194,40 @@ a clear linear relationship emerges:
 
 ---
 
-### 4️⃣ A Young Workforce Demands a Different Retention Strategy
+### 4️⃣ Overtime Is Quietly Burning Out Employees
+
+Analyzing attrition by overtime status reveals
+a stark contrast between employees who work overtime
+and those who do not.
+
+| Overtime Status | Attrition Rate | Risk Level |
+|----------------|---------------|------------|
+| No Overtime | 10.4% | 🟢 Acceptable |
+| Works Overtime | 30.5% | 🔴 Critical |
+
+> *Key Finding:* Employees working overtime are.
+> A 30.5% attrition rate among overtime workers signals
+> a serious Burnout and unsustainable workload problem.
+> This is especially dangerous when combined with
+> high-pressure roles like Sales and Recruitment,
+> where overtime is likely the norm rather than the exception.
+
+---
+
+### 5️⃣ Young Workforce Demands a Different Retention Strategy
 
 The workforce demographic skews heavily young,
-with the majority falling in the **20-29 age bracket.**
+with the majority falling in the *20-29 age bracket.*
 
 | Age Group | Headcount | % of Workforce |
 |-----------|-----------|---------------|
 | < 20 | 81 | 5.5% |
-| **20-29** | **874** | **59.5%** |
+| *20-29* | *874* | *59.5%* |
 | 30-39 | 289 | 19.7% |
 | 40-49 | 219 | 14.9% |
 | 50+ | 7 | 0.5% |
 
-> **Key Finding:** With nearly **60% of the workforce**
+> *Key Finding:* With nearly *60% of the workforce*
 > being Gen Z and Millennials, traditional retention
 > approaches focused solely on salary are insufficient.
 > This generation prioritizes **career growth, purpose,
@@ -207,65 +237,85 @@ with the majority falling in the **20-29 age bracket.**
 
 ---
 
-### 5️⃣ Department-Level Attrition Signals Resource Imbalance
+### 6️⃣ Lack of Promotion Is a Primary Attrition Trigger
 
-| Department | Active Employees | Attrition Exposure |
-|------------|-----------------|-------------------|
-| Technology | 828 | High volume = High risk |
-| Sales | 354 | High attrition roles |
-| Human Resources | 51 | Small team = High impact |
+Segmenting attrition by *Years Since Last Promotion* reveals
+one of the strongest predictors of employee turnover.
+Employees who have *never received a promotion* show
+the highest attrition rate across all segments.
 
-> **Key Finding:** The Technology department holds
-> **67% of active headcount** yet contains roles
-> like Data Scientist with 23.8% attrition.
-> Losing even a small number of technical employees
-> creates disproportionate operational impact
-> due to the high cost and long lead time
-> of replacing specialized talent.
+| Years Since Last Promotion | Attrition Rate | Risk Level |
+|---------------------------|---------------|------------|
+| 0 - Never Promoted | 37.9% | 🔴 Critical |
+| 1 | 24.6% | 🔴 High |
+| 2 | 10.0% | 🟡 Moderate |
+| 3 | 12.0% | 🟡 Moderate |
+| 4 | 7.5% | 🟢 Acceptable |
+| 5 | 9.5% | 🟢 Acceptable |
+| 6 | 4.6% | 🟢 Healthy |
+| 7 | 4.5% | 🟢 Healthy |
+| 8 | 2.9% | 🟢 Healthy |
+| 9 | 3.9% | 🟢 Healthy |
 
+> *Key Finding:* Employees who have *never been promoted*
+> exhibit an attrition rate of *37.9%* 
+> the overall company rate of 16.1%.**
+> The sharp decline after Year 1 confirms that the absence
+> of any career progression signal, even early on,
+> is a critical attrition trigger.
+> This is not solely a tenure issue — it is a
+> *career visibility and recognition problem.*
 
+---
 
 ## ✅ Recommendations
 
 ### 1️⃣ Fix Early Attrition 🔴 High Priority
-- Develop strong **90-Day Onboarding Program**
-- Implement **Buddy System** for every new hire
-- Schedule **30-60-90 Day Check-ins** with direct managers
-- Set clear **job expectations** before hiring
-
----
+- Develop strong *90-Day Onboarding Program*
+- Implement *Buddy System* for every new hire
+- Schedule *30-60-90 Day Check-ins* with direct managers
+- Set clear *job expectations* before hiring
 
 ### 2️⃣ Retain High-Pressure Roles 🔴 High Priority
-- Review **Compensation & Commission Structure**
-- Add **Non-monetary Benefits**
+- Review *Compensation & Commission Structure*
+- Add *Non-monetary Benefits*
   - Flexible working hours
   - Remote work options
   - Professional development budget
-- Review **Workload & KPIs** to ensure they are realistic
+- Review *Workload & KPIs* to ensure they are realistic
 
----
+### 3️⃣ Control Overtime & Prevent Burnout 🔴 High Priority
+- Set a *maximum overtime cap* per employee per month
+- Monitor overtime patterns using a *Burnout Risk Score*
+- Hire additional headcount in *high-overtime departments*
+- Introduce *Compensatory Time Off* for overtime workers
+- Conduct *monthly Workload Review* with team managers
 
-### 3️⃣ Manage Business Travel 🟡 Medium Priority
-- Set **maximum travel limit** per employee per month
-- Provide **Travel Allowance** & additional bonuses
-- Replace unnecessary trips with **Virtual Meetings**
-- Offer **extra days off** after long travel periods
+### 4️⃣ Manage Business Travel 🟡 Medium Priority
+- Set *maximum travel limit* per employee per month
+- Provide *Travel Allowance* & additional bonuses
+- Replace unnecessary trips with *Virtual Meetings*
+- Offer *extra days off* after long travel periods
 
----
+### 5️⃣ Build a Promotion & Career Growth Framework 🟡 Medium Priority
+- Introduce an *Early Promotion Track* for high performers
+- Establish *Career Milestone Rewards* as interim recognition
+- Ensure every new hire has a clearly defined
+  *Promotion Criteria & Timeline* from Day 1
+- Conduct *quarterly career conversations* between
+  managers and employees
+- Implement a *Performance Visibility System*
 
-### 4️⃣ Develop Young Talent 🟡 Medium Priority
-- Create clear **Career Path** for each role
-- Launch **Learning & Development** programs
-- Set transparent **Promotion Timeline**
-- Offer **Mentorship Programs** with senior employees
+### 6️⃣ Develop Young Talent 🟡 Medium Priority
+- Create clear *Career Path* for each role
+- Launch *Learning & Development* programs
+- Set transparent *Promotion Timeline*
+- Offer *Mentorship Programs* with senior employees
 
----
+<img width="1841" height="873" alt="Overview" src="https://github.com/user-attachments/assets/bd950dfd-bd2c-413a-9b04-3de2666aed03" />
 
-## 📋 Recommendations Priority Matrix
+<img width="1842" height="897" alt="Demographics" src="https://github.com/user-attachments/assets/f2d2617a-404a-4edf-87f9-91577802a44e" />
 
-| Priority | Problem |7 Solution | Expected Impact |
-|----------|---------|----------|----------------|
-| 🔴 Urgent | Early Attrition | Onboarding Program | -10 to 15% |
-| 🔴 Urgent | Sales & Recruitment | Compensation Review | -8 to 12% |
-| 🟡 Medium | Frequent Travel | New Travel Policy | -5 to 8% |
-| 🟡 Medium | Young Employees | Career Development | +Retention |
+<img width="1860" height="892" alt="Attrition" src="https://github.com/user-attachments/assets/a51b2ad6-f083-4d53-9415-75522e270fcc" />
+
+
