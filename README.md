@@ -18,17 +18,32 @@ This analysis aims to:
 - Understand workforce demographics
 - Provide actionable recommendations to reduce turnover
 
-## 📊 Dataset Overview
 
 
+## 📁 Dataset Overview
 
- -  Number of rows: 8,194
-           
- -  Number of columns: 41
+The dataset consists of multiple tables
+loaded and modeled in Power Pivot:
+
+| Table | Rows | Columns | Description |
+|-------|------|---------|-------------|
+| DimEmployee | 1,470 | 24 | Employee personal & job info |
+| FactPerformance | 6,709 | 11 | Performance review records |
+| DimDate | 1,192| 28| Date dimension table |
+| DimSatisfiedLevel | 5 | 2 | Satisfaction rating lookup |
+| DimRatingLevel | 5 | 2 | Performance rating lookup |
+| DimEducationalLevel | 5 | 2 | Education level lookup |
+
+
              
- -  Data Source: DataCamp
+  ## Data Source
+  
+  Dource: DataCamp
+  Domain : Human Resourses
          
- - Tool :Excdel / Power Query / PowerPivot
+## Tools Used
+
+Excdel / Power Query / PowerPivot
 
 
 
